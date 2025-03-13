@@ -120,7 +120,7 @@
             
             if (fileInput.files.length > 0 && assignmentTitle && dueDate) {
                 let fileName = fileInput.files[0].name;
-                let fileURL = URL.createObjectURL(fileInput.files[0]);
+                let fileURL = "https://docs.google.com/document/d/1oh9_JN6x9Xm_a5Rt33KrT5nJU87IabkGMtwdNLN8zGg/edit?usp=drive_link";  // Google Docs public link
                 let listItem = document.createElement('li');
                 let link = document.createElement('a');
                 link.href = fileURL;
@@ -169,7 +169,7 @@
 
         function resubmitAssignment(title, due, file) {
             // Resubmission allows the user to reupload the file and update the assignment
-            let fileURL = URL.createObjectURL(file);
+            let fileURL = "https://docs.google.com/document/d/1oh9_JN6x9Xm_a5Rt33KrT5nJU87IabkGMtwdNLN8zGg/edit?usp=drive_link";  // Google Docs public link
             let assignments = JSON.parse(localStorage.getItem('assignments')) || [];
             let updatedAssignments = assignments.map(assignment => {
                 if (assignment.title === title) {
